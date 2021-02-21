@@ -103,14 +103,6 @@ class menu_acf_field_menu extends acf_field {
 		*  More than one setting can be added by copy/paste the above code.
 		*  Please note that you must also have a matching $defaults value for the field name (font_size)
 		*/
-		
-		// acf_render_field_setting( $field, array(
-		// 	'label'			=> __('Font Size','acf-menu'),
-		// 	'instructions'	=> __('Customise the input font size','acf-menu'),
-		// 	'type'			=> 'number',
-		// 	'name'			=> 'font_size',
-		// 	'prepend'		=> 'px',
-		// ));
 
 	}
 	
@@ -132,23 +124,9 @@ class menu_acf_field_menu extends acf_field {
 	*/
 	
 	function render_field( $field ) {
-
 		$field['type']  = 'select';
 		$field['ui']    = 1;
 		$field['label']	= '';
-		
-		/*
-		*  Review the data of $field.
-		*  This will show what data is available
-		*/
-
-		echo '<pre>';
-			//print_r( $field );
-		echo '</pre>';
-		
-		/*
-		*  Create a simple text input using the 'font_size' setting.
-		*/
 
 		$menus = wp_get_nav_menus();
 
@@ -156,12 +134,7 @@ class menu_acf_field_menu extends acf_field {
 			$field['choices'][$value->term_id] = $value->name;
 		}
 
-		?>
-
-		<?php acf_render_field_wrap($field); ?>
-
-		<!-- <input type="text" name="<?php //echo esc_attr($field['name']) ?>" value="<?php //echo esc_attr($field['value']) ?>" style="font-size:<?php echo $field['font_size'] ?>px;" /> -->
-		<?php
+		acf_render_field_wrap($field);
 	}
 	
 		
@@ -404,16 +377,6 @@ class menu_acf_field_menu extends acf_field {
 			return $value;
 			
 		}
-		
-		
-		// apply setting
-		if( $field['font_size'] > 12 ) { 
-			
-			// format the value
-			// $value = 'something';
-		
-		}
-		
 		
 		// return
 		return $value;
