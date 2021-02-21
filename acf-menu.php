@@ -85,7 +85,7 @@ class menu_acf_plugin_menu {
 
 
 // initialize
-new NAMESPACE_acf_plugin_FIELD_NAME();
+new menu_acf_plugin_menu();
 
 
 // class_exists check
