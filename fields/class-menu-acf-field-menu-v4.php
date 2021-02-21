@@ -5,10 +5,10 @@ if( ! defined( 'ABSPATH' ) ) exit;
 
 
 // check if class already exists
-if( !class_exists('NAMESPACE_acf_field_FIELD_NAME') ) :
+if( !class_exists('menu_acf_field_menu') ) :
 
 
-class NAMESPACE_acf_field_FIELD_NAME extends acf_field {
+class menu_acf_field_menu extends acf_field {
 	
 	// vars
 	var $settings, // will hold info such as dir / path
