@@ -1,7 +1,7 @@
-# === Advanced Custom Fields: Menu Field ===
+# Advanced Custom Fields: Menu Field
 A custom field for ACF that allows you to select any WordPress menu.
 
-== Description ==
+## Description
 
 This plugin will add a new ACF field called "Menu" which can be found under "Relational". This field will allow you to pick from a list of all WordPress menu that have been added from the "Appearance > Menu" setting screen.
 
@@ -26,13 +26,13 @@ This plugin was created because a project we were working on required different 
 
 That said, you can build out all of the menus you need from the native menu builder in WordPress and use this plugin to select it on any page you need.
 
-= Compatibility =
+## Compatibility
 
 This ACF field type is compatible with:
 * ACF 5
 * ACF 4
 
-== Installation ==
+## Installation
 
 1. Copy the `acf-menu` folder into your `wp-content/plugins` folder
 2. Activate the Menu plugin via the plugins admin page
